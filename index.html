@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Microsoft Word Introduction</title>
+  <style>
+    :root {
+      --bg-color: #f0f2f5;
+      --text-color: #333;
+      --card-bg: white;
+      --header-bg: #2b5797;
+      --footer-bg: #2b5797;
+      --btn-bg: #2b5797;
+      --btn-color: white;
+    }
+
+    body.dark {
+      --bg-color: #1e1e1e;
+      --text-color: #eee;
+      --card-bg: #2a2a2a;
+      --header-bg: #1f3d70;
+      --footer-bg: #1f3d70;
+      --btn-bg: #444;
+      --btn-color: #fff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 30px;
+      padding-bottom: 80px;
+      transition: background 0.4s, color 0.4s;
+    }
+
+    header {
+      text-align: center;
+      background: var(--header-bg);
+      color: white;
+      padding: 30px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+
+    .lang-switch, .dark-switch {
+      position: absolute;
+      top: 20px;
+      background: white;
+      color: #2b5797;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .lang-switch { right: 140px; }
+    .dark-switch { right: 20px; }
+
+    .content {
+      max-width: 800px;
+      margin: auto;
+      margin-top: 40px;
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+    }
+
+    h2 {
+      color: #2b5797;
+      margin-top: 30px;
+    }
+
+    .speak-btn {
+      background: var(--btn-bg);
+      color: var(--btn-color);
+      border: none;
+      padding: 8px 15px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .speak-btn:hover {
+      background: #1a3f6e;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    footer {
+     position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.288);
+      color: Black;
+      text-align: center;
+      padding: 12px;
+      font-size: 15px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeInUp 1s forwards;
+    }
+  </style>
+</head>
+<body>
+  <header>
+     <img src="https://cdn.worldvectorlogo.com/logos/word-1.svg" 
+     alt="MS Word Logo" 
+     style="height: 60px; position: absolute; top: 20px; left: 20px;">
+
+
+    <h1 id="page-title">Microsoft Word (MS Word) का परिचय</h1>
+    <button class="lang-switch" onclick="toggleLanguage()">🌐 ENGLISH</button>
+    <button class="dark-switch" onclick="toggleDarkMode()">🌓 Dark Mode</button>
+  </header>
+
+  <div class="content fade-in" id="intro">
+    <!-- Hindi Section -->
+    <div id="hindi-section">
+      <h2>MS Word क्या है?</h2>
+      <p id="h1">Microsoft Word एक वर्ड प्रोसेसिंग सॉफ़्टवेयर है जिसे Microsoft द्वारा विकसित किया गया है। यह दस्तावेज़ बनाने, संपादित करने, स्वरूपित करने और प्रिंट करने के लिए उपयोग किया जाता है।</p>
+      <button class="speak-btn" onclick="speakText(document.getElementById('h1').innerText)">🔊 सुनें</button>
+
+      <h2>मुख्य विशेषताएँ:</h2>
+      <ul id="h2">
+        <li>टेक्स्ट टाइप और फॉर्मेट करना</li>
+        <li>चित्र, तालिका और चार्ट जोड़ना</li>
+        <li>डिज़ाइन और लेआउट टेम्प्लेट</li>
+        <li>स्पेलिंग और ग्रामर चेक</li>
+        <li>PDF के रूप में सेव करना</li>
+      </ul>
+      <button class="speak-btn" onclick="speakText(document.getElementById('h2').innerText)">🔊 सुनें</button>
+
+      <h2>MS Word का उपयोग कहाँ होता है?</h2>
+      <p id="h3">MS Word का उपयोग स्कूल, कॉलेज, ऑफिस, और व्यवसायों में दस्तावेज़ तैयार करने, पत्र लिखने, रिपोर्ट बनाने और बायोडाटा तैयार करने के लिए किया जाता है।</p>
+      <button class="speak-btn" onclick="speakText(document.getElementById('h3').innerText)">🔊 सुनें</button>
+
+      <h2>निष्कर्ष:</h2>
+      <p id="h4">MS Word एक शक्तिशाली और उपयोग में आसान टूल है जो लगभग हर पेशेवर और छात्र के लिए जरूरी बन गया है।</p>
+      <button class="speak-btn" onclick="speakText(document.getElementById('h4').innerText)">🔊 सुनें</button>
+
+<!-- Home Tab HINDI Section -->
+<div class="content fade-in" id="home-tab-hindi">
+  <h2>🏠 Home Tab के Group</h2>
+
+  <h3>🔹 1. Clipboard Group</h3>
+  <ul id="home1">
+    <li><strong>Cut</strong> – चयनित टेक्स्ट या ऑब्जेक्ट को हटाता है।</li>
+    <li><strong>Copy</strong> – चयनित सामग्री को कॉपी करता है।</li>
+    <li><strong>Paste</strong> – कट या कॉपी की गई सामग्री को चिपकाता है।</li>
+    <li><strong>Format Painter</strong> – एक भाग की formatting को दूसरे भाग में लागू करता है।</li>
+  </ul>
+  <button class="speak-btn" onclick="speakText(home1.innerText)">🔊 सुनें</button>
+
+  <h3>🔹 2. Font Group</h3>
+  <ul id="home2">
+    <li><strong>Font Style & Size</strong> – फ़ॉन्ट प्रकार और आकार बदलें।</li>
+    <li><strong>Bold, Italic, Underline</strong> – टेक्स्ट को हाइलाइट करें।</li>
+    <li><strong>Text Color</strong> – टेक्स्ट का रंग बदलें।</li>
+    <li><strong>Highlight</strong> – टेक्स्ट को हाइलाइट करें।</li>
+    <li><strong>Strikethrough, Subscript, Superscript</strong></li>
+    <li><strong>Change Case</strong> – अक्षरों का आकार बदलें।</li>
+    <li><strong>Clear Formatting</strong> – सभी formatting हटाएं।</li>
+  </ul>
+  <button class="speak-btn" onclick="speakText(home2.innerText)">🔊 सुनें</button>
+
+  <h3>🔹 3. Paragraph Group</h3>
+  <ul id="home3">
+    <li><strong>Bullets & Numbering</strong> – लिस्ट बनाएं।</li>
+    <li><strong>Indent & Spacing</strong> – spacing नियंत्रित करें।</li>
+    <li><strong>Alignment</strong> – Left, Center, Right, Justify।</li>
+    <li><strong>Line Spacing</strong> – लाइनों की दूरी।</li>
+    <li><strong>Borders & Shading</strong></li>
+    <li><strong>Sort</strong></li>
+    <li><strong>Show/Hide ¶</strong></li>
+  </ul>
+  <button class="speak-btn" onclick="speakText(home3.innerText)">🔊 सुनें</button>
+
+  <h3>🔹 4. Styles Group</h3>
+  <p id="home4">Predefined Heading, Title आदि formatting एक क्लिक में।</p>
+  <button class="speak-btn" onclick="speakText(home4.innerText)">🔊 सुनें</button>
+
+  <h3>🔹 5. Editing Group</h3>
+  <ul id="home5">
+    <li><strong>Find</strong> – शब्द खोजें।</li>
+    <li><strong>Replace</strong> – शब्द बदलें।</li>
+    <li><strong>Select</strong> – टेक्स्ट चुनें।</li>
+  </ul>
+  <button class="speak-btn" onclick="speakText(home5.innerText)">🔊 सुनें</button>
+</div>
+
+<!-- Home Tab ENGLISH Section -->
+<div class="content fade-in hidden" id="home-tab-english">
+  <h2>🏠 Home Tab Groups</h2>
+
+  <h3>🔹 1. Clipboard Group</h3>
+  <ul id="ehome1">
+    <li><strong>Cut</strong> – Removes the selected text or object.</li>
+    <li><strong>Copy</strong> – Copies the selected content.</li>
+    <li><strong>Paste</strong> – Inserts the copied or cut content.</li>
+    <li><strong>Format Painter</strong> – Copies formatting from one part to another.</li>
+  </ul>
+  <button class="speak-btn" onclick="speakText(ehome1.innerText)">🔊 Listen</button>
+
+  <h3>🔹 2. Font Group</h3>
+  <ul id="ehome2">
+    <li><strong>Font Style & Size</strong> – Change font type and size.</li>
+    <li><strong>Bold, Italic, Underline</strong> – Emphasize text.</li>
+    <li><strong>Text Color</strong> – Change font color.</li>
+    <li><strong>Text Highlight Color</strong> – Highlight text like a marker.</li>
+    <li><strong>Strikethrough, Subscript, Superscript</strong></li>
+    <li><strong>Change Case</strong> – Switch between cases.</li>
+    <li><strong>Clear Formatting</strong> – Removes all formatting.</li>
+  </ul>
+  <button class="speak-btn" onclick="speakText(ehome2.innerText)">🔊 Listen</button>
+
+  <h3>🔹 3. Paragraph Group</h3>
+  <ul id="ehome3">
+    <li><strong>Bullets & Numbering</strong> – Create lists.</li>
+    <li><strong>Indent & Spacing</strong> – Control paragraph spacing.</li>
+    <li><strong>Text Alignment</strong> – Left, Center, Right, Justify.</li>
+    <li><strong>Line Spacing</strong> – Adjust line spacing.</li>
+    <li><strong>Borders & Shading</strong></li>
+    <li><strong>Sort</strong> – Arrange text alphabetically.</li>
+    <li><strong>Show/Hide ¶</strong> – Show formatting marks.</li>
+  </ul>
+  <button class="speak-btn" onclick="speakText(ehome3.innerText)">🔊 Listen</button>
+
+  <h3>🔹 4. Styles Group</h3>
+  <p id="ehome4">Predefined text styles like headings and titles for quick formatting.</p>
+  <button class="speak-btn" onclick="speakText(ehome4.innerText)">🔊 Listen</button>
+
+  <h3>🔹 5. Editing Group</h3>
+  <ul id="ehome5">
+    <li><strong>Find</strong> – Locate specific text.</li>
+    <li><strong>Replace</strong> – Replace one word with another.</li>
+    <li><strong>Select</strong> – Select text or objects.</li>
+  </ul>
+  <button class="speak-btn" onclick="speakText(ehome5.innerText)">🔊 Listen</button>
+</div>
+
+    </div>
+
+    <!-- English Section -->
+    <div id="english-section" class="hidden">
+      <h2>What is MS Word?</h2>
+      <p id="e1">Microsoft Word is a word processing software developed by Microsoft. It is used for creating, editing, formatting, and printing documents.</p>
+      <button class="speak-btn" onclick="speakText(document.getElementById('e1').innerText)">🔊 Listen</button>
+
+      <h2>Main Features:</h2>
+      <ul id="e2">
+        <li>Type and format text</li>
+        <li>Insert pictures, tables, and charts</li>
+        <li>Design and layout templates</li>
+        <li>Spelling and grammar check</li>
+        <li>Save as PDF</li>
+      </ul>
+      <button class="speak-btn" onclick="speakText(document.getElementById('e2').innerText)">🔊 Listen</button>
+
+      <h2>Where is MS Word used?</h2>
+      <p id="e3">MS Word is used in schools, colleges, offices, and businesses for creating documents, writing letters, making reports, and preparing resumes.</p>
+      <button class="speak-btn" onclick="speakText(document.getElementById('e3').innerText)">🔊 Listen</button>
+
+      <h2>Conclusion:</h2>
+      <p id="e4">MS Word is a powerful and easy-to-use tool that has become essential for almost every professional and student.</p>
+      <button class="speak-btn" onclick="speakText(document.getElementById('e4').innerText)">🔊 Listen</button>
+    </div>
+  </div>
+
+  <footer>
+    Made with ❤️ by Mohit
+  </footer>
+
+  <script>
+  let voices = [];
+  let hindiVoice = null;
+  let englishVoice = null;
+
+  function loadVoices() {
+    voices = speechSynthesis.getVoices();
+
+    hindiVoice = voices.find(v => v.lang === "hi-IN" && v.name.toLowerCase().includes("female")) ||
+                 voices.find(v => v.lang === "hi-IN");
+
+    englishVoice = voices.find(v => v.lang.startsWith("en") && v.name.toLowerCase().includes("female")) ||
+                   voices.find(v => v.lang.startsWith("en"));
+  }
+
+  speechSynthesis.onvoiceschanged = loadVoices;
+
+  function speakText(text) {
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = /[अ-ह]/.test(text) ? "hi-IN" : "en-US";
+    utterance.voice = /[अ-ह]/.test(text) ? hindiVoice : englishVoice;
+    speechSynthesis.cancel();
+    speechSynthesis.speak(utterance);
+  }
+
+  function toggleLanguage() {
+    const hindiIntro = document.getElementById("hindi-section");
+    const englishIntro = document.getElementById("english-section");
+
+    const hindiHome = document.getElementById("home-tab-hindi");
+    const englishHome = document.getElementById("home-tab-english");
+
+    const btn = document.querySelector(".lang-switch");
+    const title = document.getElementById("page-title");
+
+    const isHindi = !hindiIntro.classList.contains("hidden");
+
+    if (isHindi) {
+      // Switch to English
+      hindiIntro.classList.add("hidden");
+      englishIntro.classList.remove("hidden");
+
+      hindiHome.classList.add("hidden");
+      englishHome.classList.remove("hidden");
+
+      title.innerText = "Introduction to Microsoft Word";
+      btn.innerText = "🌐 हिंदी";
+    } else {
+      // Switch to Hindi
+      hindiIntro.classList.remove("hidden");
+      englishIntro.classList.add("hidden");
+
+      hindiHome.classList.remove("hidden");
+      englishHome.classList.add("hidden");
+
+      title.innerText = "Microsoft Word (MS Word) का परिचय";
+      btn.innerText = "🌐 ENGLISH";
+    }
+  }
+
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark');
+  }
+
+  window.onload = () => {
+    loadVoices();
+    setTimeout(loadVoices, 500);
+  };
+
+  const fadeIn = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.animation = 'fadeInUp 1s ease-out forwards';
+      }
+    });
+  });
+
+  fadeIn.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
